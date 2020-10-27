@@ -1,0 +1,26 @@
+{% from "macros.html" import make_field %}
+
+<div class="modal {% block classes %}{% endblock classes %}" id="{% block id %}{% endblock id %}">
+	<div class="modal-background"></div>
+	<div class="modal-content">
+		<div class="container">
+			<div class="box">
+				<br />
+				<form class="has-background-white" action="" method="POST" accept-charset="utf-8">
+				{{ form.hidden_tag() }}
+				<fieldset>
+					{% block fields %}{% endblock fields %}
+				</fieldset>
+				<div class="field">
+					<div class="control">
+						<div class="buttons">
+							{{ form.submit(class="button is-primary is-rounded", type="submit") }}
+							<button type="button" class="button is-rounded is-danger cancel reset">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</div>

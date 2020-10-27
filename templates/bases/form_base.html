@@ -1,0 +1,17 @@
+{% from "macros.html" import make_field %}
+
+<form class="has-background-white" action="" method="POST" accept-charset="utf-8">
+	{{ form.hidden_tag() }}
+	<fieldset>
+		{% block fields %}{% endblock fields %}
+	</fieldset>
+	<div class="field">
+		<div class="control">
+			<div class="buttons">
+				{% block buttons %}
+				{{ form.submit(class="button is-primary is-rounded", type="submit") }}
+				{% endblock buttons %}
+			</div>
+		</div>
+	</div>
+</form>

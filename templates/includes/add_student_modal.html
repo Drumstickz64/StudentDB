@@ -1,0 +1,14 @@
+{% extends "bases/form_modal_base.html" %}
+
+{% block id %}add-student{% endblock id %}
+
+{% block classes %}
+{%- if form.name.errors or form.class_.errors %}
+	is-active is-clipped
+{% endif %}
+{% endblock classes %}
+
+{%- block fields %}
+	{{ make_field(form.name) }}
+	{{ make_field(form.class_) }}
+{% endblock fields %}

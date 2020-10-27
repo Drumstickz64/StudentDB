@@ -1,0 +1,50 @@
+{% extends "bases/base.html" %}
+
+{% block header_icons %}
+<button class="button is-primary" id="add-student-button">
+	<span class="icon">
+		<i class="fas fa-plus"></i>
+	</span>
+</button>
+{% endblock header_icons %}
+
+{% block content %}
+{% include "includes/add_student_modal.html" %}
+
+<div class="field search-field">
+	<p class="control  has-icons-left">
+		<input class="input is-primary is-rounded" placeholder="Search Students" type="search" name="student-search" id="student-search" value="" />
+		<a class="icon is-small is-left">
+			<i class="fas fa-search"></i>
+		</a>
+	</p>
+</div>
+<br />
+<div class="student-grid">
+	{% for student in students %}
+	<a class="student-level" href="{{ url_for('student', student_id=student['id']) }}">
+		<div class="has-text-centered">
+			<div>
+				<p class="heading has-text-weight-bold has-text-primary">
+					Name
+				</p>
+				<p class="title w-10 has-text-weight-normal is-size-4">
+					{{ student["name"] }}
+				</p>
+			</div>
+		</div>
+
+		<div class="has-text-centered">
+			<div>
+				<p class="heading has-text-weight-bold has-text-primary">
+					Class
+				</p>
+				<p class="title has-text-weight-normal is-size-4">
+					{{ student["class"] }}
+				</p>
+			</div>
+		</div>
+	</a>
+	{% endfor %}
+</div>
+{% endblock content %}

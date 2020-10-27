@@ -1,0 +1,11 @@
+{% extends "bases/form_base.html" %}
+
+{%- block fields %}
+	{{ make_field(form.name) }}
+	{{ make_field(form.class_) }}
+{% endblock fields %}
+
+{%- block buttons %}
+	{{ form.submit(class="button is-primary is-rounded", type="submit") }}
+	<button type="button" id="delete-student-button" class="button is-danger is-rounded">Delete</button>
+{%+ endblock buttons %}

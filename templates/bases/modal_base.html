@@ -1,0 +1,15 @@
+<div class="modal {% block classes %}{% endblock classes %}" id="{% block id %}{% endblock id %}">
+	<div class="modal-background"></div>
+	<div class="modal-content">
+		<div class="container">
+			<div class="box">
+				{% block content %}{% endblock content %}
+				<br />
+				<div class="buttons">
+					{% block buttons %}{% endblock buttons %}
+					<button class="button is-rounded is-primary cancel">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

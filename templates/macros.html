@@ -1,0 +1,19 @@
+{% macro make_field(field) %}
+<div class="field">
+	{{ field.label(class="label") }}
+
+	{% if field.errors %}
+	<div class="control">
+		{{ field(class="input is-danger is-rounded") }}
+
+		{% for error in field.errors %}
+		<span class="help is-small is-danger">{{ error }}</span>
+		{% endfor %}
+	</div>
+	{% else %}
+	<div class="container">
+		{{ field(class="input is-primary is-rounded") }}
+	</div>
+	{% endif %}
+</div>
+{% endmacro %}

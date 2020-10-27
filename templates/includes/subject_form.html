@@ -1,0 +1,8 @@
+{% extends "bases/form_base.html" %}
+
+{%- block fields %}
+	{{ make_field(form.name) }}
+	{{ make_field(form.first_half) }}
+	{{ make_field(form.second_half) }}
+	{{ make_field(form.final) }}
+{% endblock fields %}

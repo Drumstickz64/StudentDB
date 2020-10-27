@@ -1,0 +1,15 @@
+{% extends "bases/base.html" %}
+
+{% block header_icons %}
+<a class="button is-primary" href="{{ url_for('home') }}">
+	<span class="icon">
+		<i class="fas fa-home"></i>
+	</span>
+</a>
+{% endblock header_icons %}
+
+{% block content %}
+<div class="box" id="subject-form-container">
+	{% include "includes/subject_form.html" %}
+</div>
+{% endblock content %}
