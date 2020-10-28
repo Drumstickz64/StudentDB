@@ -3,7 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Student App</title>
+	{% if title %}
+	<title>StudentDB - {{ title }}</title>
+	{% else %}
+	<title>StudentDB</title>
+	{% endif %}
 	<link rel="stylesheet" href="{{ url_for('static', filename='bulma.min.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" media="all" />
 	{% block css %}{% endblock css %}

@@ -34,7 +34,7 @@ def student(student_id):
 		edit_student(student_id, new_name, new_class)
 		return redirect(url_for("student", student_id=student_id))
 	
-	return render_template("student.html",
+	return render_template("student.html", title=student["name"],
 							student=student, form=form)
 
 @app.route("/student/<int:student_id>/delete", methods=["GET", "POST"])

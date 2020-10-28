@@ -32,6 +32,9 @@ body {
 	background-color: #fff;
 	position: relative;
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 	-webkit-transition: transform 100ms ease;
 	-moz-transition: transform 100ms ease;
 	-ms-transition: transform 100ms ease;
